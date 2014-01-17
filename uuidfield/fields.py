@@ -20,7 +20,7 @@ class StringUUID(uuid.UUID):
         super(StringUUID, self).__init__(*args, **kwargs)
 
     def __unicode__(self):
-        return unicode(str(self))
+        return u'%s' % str(self)
 
     def __str__(self):
         if self.hyphenate:
